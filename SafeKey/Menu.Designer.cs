@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.pnContraseñaNueva = new System.Windows.Forms.Panel();
+            this.ckMostrar = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btVolverNcontraseña = new System.Windows.Forms.Button();
+            this.btGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btGenerarPass = new System.Windows.Forms.Button();
             this.pnIzq = new System.Windows.Forms.Panel();
-            this.pnLogo = new System.Windows.Forms.Panel();
-            this.btNuevaContraseña = new System.Windows.Forms.Button();
+            this.btSalir = new System.Windows.Forms.Button();
             this.btVerContraseñas = new System.Windows.Forms.Button();
+            this.btNuevaContraseña = new System.Windows.Forms.Button();
+            this.pnLogo = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnMisContraseñas = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btSalir = new System.Windows.Forms.Button();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ckMostrar = new System.Windows.Forms.CheckBox();
             this.pnContraseñaNueva.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnIzq.SuspendLayout();
             this.pnLogo.SuspendLayout();
-            this.pnMisContraseñas.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnMisContraseñas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnContraseñaNueva
@@ -68,13 +69,25 @@
             this.pnContraseñaNueva.Controls.Add(this.textBox2);
             this.pnContraseñaNueva.Controls.Add(this.textBox1);
             this.pnContraseñaNueva.Controls.Add(this.txtContraseña);
-            this.pnContraseñaNueva.Controls.Add(this.button3);
-            this.pnContraseñaNueva.Controls.Add(this.button2);
+            this.pnContraseñaNueva.Controls.Add(this.btVolverNcontraseña);
+            this.pnContraseñaNueva.Controls.Add(this.btGuardar);
             this.pnContraseñaNueva.Controls.Add(this.panel1);
             this.pnContraseñaNueva.Location = new System.Drawing.Point(194, 97);
             this.pnContraseñaNueva.Name = "pnContraseñaNueva";
             this.pnContraseñaNueva.Size = new System.Drawing.Size(624, 161);
             this.pnContraseñaNueva.TabIndex = 2;
+            this.pnContraseñaNueva.Visible = false;
+            // 
+            // ckMostrar
+            // 
+            this.ckMostrar.AutoSize = true;
+            this.ckMostrar.Location = new System.Drawing.Point(240, 129);
+            this.ckMostrar.Name = "ckMostrar";
+            this.ckMostrar.Size = new System.Drawing.Size(117, 17);
+            this.ckMostrar.TabIndex = 10;
+            this.ckMostrar.Text = "Mostrar contraseña";
+            this.ckMostrar.UseVisualStyleBackColor = true;
+            this.ckMostrar.CheckedChanged += new System.EventHandler(this.ckMostrar_CheckedChanged);
             // 
             // textBox2
             // 
@@ -97,23 +110,23 @@
             this.txtContraseña.Size = new System.Drawing.Size(160, 20);
             this.txtContraseña.TabIndex = 7;
             // 
-            // button3
+            // btVolverNcontraseña
             // 
-            this.button3.Location = new System.Drawing.Point(462, 114);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 30);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "&Volver";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btVolverNcontraseña.Location = new System.Drawing.Point(462, 114);
+            this.btVolverNcontraseña.Name = "btVolverNcontraseña";
+            this.btVolverNcontraseña.Size = new System.Drawing.Size(72, 30);
+            this.btVolverNcontraseña.TabIndex = 6;
+            this.btVolverNcontraseña.Text = "&Volver";
+            this.btVolverNcontraseña.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(540, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "&Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btGuardar.Location = new System.Drawing.Point(540, 114);
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(72, 30);
+            this.btGuardar.TabIndex = 5;
+            this.btGuardar.Text = "&Guardar";
+            this.btGuardar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -156,6 +169,7 @@
             // 
             // pnIzq
             // 
+            this.pnIzq.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pnIzq.Controls.Add(this.btSalir);
             this.pnIzq.Controls.Add(this.btVerContraseñas);
             this.pnIzq.Controls.Add(this.btNuevaContraseña);
@@ -166,6 +180,47 @@
             this.pnIzq.Size = new System.Drawing.Size(158, 461);
             this.pnIzq.TabIndex = 3;
             // 
+            // btSalir
+            // 
+            this.btSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btSalir.Image = ((System.Drawing.Image)(resources.GetObject("btSalir.Image")));
+            this.btSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSalir.Location = new System.Drawing.Point(0, 413);
+            this.btSalir.Name = "btSalir";
+            this.btSalir.Size = new System.Drawing.Size(158, 48);
+            this.btSalir.TabIndex = 3;
+            this.btSalir.Text = "&Salir";
+            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
+            // 
+            // btVerContraseñas
+            // 
+            this.btVerContraseñas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btVerContraseñas.Image = ((System.Drawing.Image)(resources.GetObject("btVerContraseñas.Image")));
+            this.btVerContraseñas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVerContraseñas.Location = new System.Drawing.Point(0, 145);
+            this.btVerContraseñas.Name = "btVerContraseñas";
+            this.btVerContraseñas.Size = new System.Drawing.Size(158, 48);
+            this.btVerContraseñas.TabIndex = 2;
+            this.btVerContraseñas.Text = "&Mis Contraseñas";
+            this.btVerContraseñas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btVerContraseñas.UseVisualStyleBackColor = true;
+            this.btVerContraseñas.Click += new System.EventHandler(this.btVerContraseñas_Click);
+            // 
+            // btNuevaContraseña
+            // 
+            this.btNuevaContraseña.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btNuevaContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btNuevaContraseña.Image")));
+            this.btNuevaContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNuevaContraseña.Location = new System.Drawing.Point(0, 97);
+            this.btNuevaContraseña.Name = "btNuevaContraseña";
+            this.btNuevaContraseña.Size = new System.Drawing.Size(158, 48);
+            this.btNuevaContraseña.TabIndex = 1;
+            this.btNuevaContraseña.Text = "&Nueva Contraseña";
+            this.btNuevaContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btNuevaContraseña.UseVisualStyleBackColor = true;
+            this.btNuevaContraseña.Click += new System.EventHandler(this.btNuevaContraseña_Click);
+            // 
             // pnLogo
             // 
             this.pnLogo.Controls.Add(this.picLogo);
@@ -175,26 +230,16 @@
             this.pnLogo.Size = new System.Drawing.Size(158, 97);
             this.pnLogo.TabIndex = 0;
             // 
-            // btNuevaContraseña
+            // picLogo
             // 
-            this.btNuevaContraseña.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btNuevaContraseña.Location = new System.Drawing.Point(0, 97);
-            this.btNuevaContraseña.Name = "btNuevaContraseña";
-            this.btNuevaContraseña.Size = new System.Drawing.Size(158, 48);
-            this.btNuevaContraseña.TabIndex = 1;
-            this.btNuevaContraseña.Text = "&Nueva Contraseña";
-            this.btNuevaContraseña.UseVisualStyleBackColor = true;
-            // 
-            // btVerContraseñas
-            // 
-            this.btVerContraseñas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btVerContraseñas.Location = new System.Drawing.Point(0, 145);
-            this.btVerContraseñas.Name = "btVerContraseñas";
-            this.btVerContraseñas.Size = new System.Drawing.Size(158, 48);
-            this.btVerContraseñas.TabIndex = 2;
-            this.btVerContraseñas.Text = "&Mis Contraseñas";
-            this.btVerContraseñas.UseVisualStyleBackColor = true;
-            this.btVerContraseñas.Click += new System.EventHandler(this.btVerContraseñas_Click);
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(158, 97);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // pnMisContraseñas
             // 
@@ -206,6 +251,25 @@
             this.pnMisContraseñas.Size = new System.Drawing.Size(624, 161);
             this.pnMisContraseñas.TabIndex = 10;
             this.pnMisContraseñas.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(183, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(441, 161);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(183, 161);
+            this.panel3.TabIndex = 5;
             // 
             // button1
             // 
@@ -225,63 +289,14 @@
             this.button4.Text = "&Guardar";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(183, 161);
-            this.panel3.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(183, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(441, 161);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // btSalir
-            // 
-            this.btSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btSalir.Location = new System.Drawing.Point(0, 413);
-            this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(158, 48);
-            this.btSalir.TabIndex = 3;
-            this.btSalir.Text = "&Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
-            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
-            // 
-            // picLogo
-            // 
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(158, 97);
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(158, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(672, 51);
             this.panel4.TabIndex = 11;
-            // 
-            // ckMostrar
-            // 
-            this.ckMostrar.AutoSize = true;
-            this.ckMostrar.Location = new System.Drawing.Point(240, 129);
-            this.ckMostrar.Name = "ckMostrar";
-            this.ckMostrar.Size = new System.Drawing.Size(117, 17);
-            this.ckMostrar.TabIndex = 10;
-            this.ckMostrar.Text = "Mostrar contraseña";
-            this.ckMostrar.UseVisualStyleBackColor = true;
-            this.ckMostrar.CheckedChanged += new System.EventHandler(this.ckMostrar_CheckedChanged);
             // 
             // Menu
             // 
@@ -301,18 +316,18 @@
             this.panel1.PerformLayout();
             this.pnIzq.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
-            this.pnMisContraseñas.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnMisContraseñas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnContraseñaNueva;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btVolverNcontraseña;
+        private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btGenerarPass;
         private System.Windows.Forms.TextBox textBox2;

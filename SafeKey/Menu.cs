@@ -46,5 +46,13 @@ namespace SafeKey
             else
                 pnMisContraseñas.Visible = true;
         }
+
+        private void btNuevaContraseña_Click(object sender, EventArgs e)
+        {
+            if (pnContraseñaNueva.Visible)
+                pnContraseñaNueva.Visible = false;
+            else
+                pnContraseñaNueva.Visible = true;
+        }
     }
 }

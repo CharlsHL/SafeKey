@@ -21,9 +21,7 @@ namespace SafeKey
 
         private void btGenerarPass_Click(object sender, EventArgs e)
         {
-            ManagerContraseñas contraseñas =  new ManagerContraseñas();
-            var contraseña = contraseñas.GenerarContrasña();
-            txtContraseña.Text = contraseña;
+            txtContraseña.Text = generarContraseñaSegura();
         }
 
         private void btSalir_Click(object sender, EventArgs e)
@@ -53,6 +51,24 @@ namespace SafeKey
                 pnContraseñaNueva.Visible = false;
             else
                 pnContraseñaNueva.Visible = true;
+        }
+
+        private void btGenerarContraseñaApp_Click(object sender, EventArgs e)
+        {
+            txtGenerarContraseñaAPP.Text = generarContraseñaSegura();
+        }
+
+        public string generarContraseñaSegura()
+        {
+            ManagerContraseñas contraseñas = new ManagerContraseñas();
+            string contraseña = contraseñas.GenerarContrasña();
+            return contraseña;
+            
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
